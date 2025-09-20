@@ -1,0 +1,132 @@
+import { DetailItem } from '../../components';
+
+# Transactions
+
+Polkadot Live provides a streamlined and elegant way to submit extrinsics (transactions) to supported Substrate-based networks. This functionality is designed to be fast, non-intrusive, and integrated smoothly. Currently, submitting extrinsics is fully supported for accounts imported via Ledger hardware wallets, wallets supporting the WalletConnect protocol, and the Polkadot Vault application.
+
+## Submitting transactions
+
+The process of submitting a transaction is handled entirely within the Polkadot Live interface. When you perform actions such as setting up token transfers or interacting with staking features, a pending extrinsic (transaction) is added to the **Extrinsics** window.
+
+Each extrinsic can be reviewed before submission. The **Extrinsics** window provides a summary dialog for each transaction with details such as:
+
+<ul className="flex_Col1">
+  <DetailItem
+    title={<span>Pallet and method name</span>}
+    description={
+      <span>
+        For example: <code>balances.transferKeepAlive</code>, indicating the
+        pallet and function being called.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>Estimated transaction fee</span>}
+    description={
+      <span>
+        Displayed in the network&apos;s native token; this is the cost to
+        process the transaction.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>Signing method</span>}
+    description={
+      <span>
+        The tool used to sign the transaction—e.g., Ledger, WalletConnect, or
+        Polkadot Vault.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>Transaction-specific information</span>}
+    description={
+      <span>
+        Details like the sender&apos;s address and any relevant parameters
+        specific to the extrinsic.
+      </span>
+    }
+  />
+</ul>
+
+## Signing transactions
+
+Each extrinsic in the list includes a **Sign** button. When clicked, Polkadot Live opens a signing overlay tailored to the signing account and its import method:
+
+<ul className="flex_Col1">
+  <DetailItem
+    title={<span>Polkadot Vault</span>}
+    description={<span>a QR-based signing flow is shown.</span>}
+  />
+  <DetailItem
+    title={<span>Ledger</span>}
+    description={<span>A USB-based signing prompt is displayed.</span>}
+  />
+  <DetailItem
+    title={<span>WalletConnect</span>}
+    description={
+      <span>A session-based flow is triggered with your connected wallet.</span>
+    }
+  />
+</ul>
+
+Throughout the signing process, your private keys remain safely on your device or hardware wallet. Polkadot Live only facilitates the signing and submission.
+
+## Filtering & managing transactions
+
+The Extrinsics window offers several tools to manage your transactions efficiently:
+
+<ul className="flex_Col1">
+  <DetailItem
+    title={<span>Status filters</span>}
+    description={
+      <span>
+        Filter transactions by status such as <b>Pending</b>, <b>In-Block</b>,{' '}
+        <b>Finalized</b>, <b>Error</b>, or <b>Submitted</b>.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>Account filter</span>}
+    description={
+      <span>
+        Lets you view only the transactions associated with a specific account.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>Delete option</span>}
+    description={<span>You may also delete a transaction to remove it.</span>}
+  />
+</ul>
+
+After signing and submitting a transaction, its status will update in real time as it progresses on the blockchain. Once finalized, you can use the **Block Explorer** button to view granular information about the transaction in an external explorer.
+
+## Typical transaction flow
+
+::::steps
+
+#### Step 1
+
+Create a pending transaction by interacting with a UI.
+
+#### Step 2
+
+Review the transaction in the **Extrinsics** window.
+
+#### Step 3
+
+Click **Sign** to begin the signing process (or delete it if no longer needed).
+
+#### Step 4
+
+Complete the signing flow based on the signing account's sign method.
+
+#### Step 5
+
+Wait for confirmation as the extrinsic is submitted and finalized on-chain.
+
+#### Step 6
+
+Inspect the extrinsic in a block explorer via the transaction's block explorer menu item.
+::::

@@ -1,0 +1,46 @@
+---
+layout: landing
+---
+
+import { Button } from 'vocs/components';
+import { Download, ScreenshotGallery } from '../components';
+
+<section className="flex_Col1 flex_AlignCenter">
+  <div className="TitleRow">
+    <div className="Logo">
+      <img src="/images/logo.webp" alt="Polkadot Live Logo" />
+    </div>
+    <p className="vocs_HomePage_title">Polkadot Live</p>
+  </div>
+  <div className="vocs_HomePage_tagline TagLine">
+    Decentralised Polkadot notifications and chain interactions.
+  </div>
+  <div className="vocs_HomePage_buttons">
+    <Button href={'/overview'} variant="accent">
+      Get started
+    </Button>
+    <Button
+      className="vocs_ExternalLink"
+      href="https://github.com/polkadot-live/polkadot-live-app"
+    >
+      GitHub
+    </Button>
+  </div>
+</section>
+
+<section className="flex_Col1">
+  <Download />
+  <div className="flex_Col1">
+    <div className="HomeGalleryContainer">
+      <ScreenshotGallery
+        kind="main"
+        theme="dark"
+        count={5}
+        overrideTheme={true}
+      />
+    </div>
+    <div className="flex_JustifyCenter">
+      <Button href="/gallery">View more</Button>
+    </div>
+  </div>
+</section>

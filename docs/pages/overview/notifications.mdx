@@ -1,0 +1,113 @@
+import { DetailItem } from '../../components';
+
+# Notifications
+
+Polkadot Live offers a flexible notification system powered by subscriptions, allowing you to monitor on-chain activity across accounts, governance, and staking. Notifications are delivered both as **native OS notifications** and as **event items** within the app's main window. These event items often include helpful links to external tools like **Subscan** or the **Staking Dashboard**, depending on the notification type.
+
+## Subscription types
+
+There are currently two main types of subscriptions in Polkadot Live, with support for on-demand previews as well:
+
+<ul className="flex_Col1">
+  <DetailItem
+    title={<span>Automatic subscriptions</span>}
+    description={
+      <span>
+        These trigger notifications immediately when a tracked on-chain value
+        changes. For example, if a balance subscription is active for an
+        account, you&apos;ll be notified as soon as that account sends or
+        receives funds.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>Interval subscriptions</span>}
+    description={
+      <span>
+        These are ideal for tracking slower-moving metrics, such as OpenGov
+        referenda. You can configure a custom interval (e.g. every 60 minutes)
+        to receive updates, such as the latest Aye/Nay vote percentages on a
+        referendum.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>One-shot previews</span>}
+    description={
+      <span>
+        Some subscriptions can be previewed by clicking a &quot;one-shot&quot;
+        button. This gives you a real-time look at the event data without
+        enabling continuous tracking.
+      </span>
+    }
+  />
+</ul>
+
+## Available subscriptions
+
+Polkadot Live supports subscriptions for a variety of data types across Substrate-based chains, including:
+
+<ul className="flex_Col1">
+  <DetailItem
+    title={<span>Account metrics</span>}
+    description={
+      <span>
+        Track free, frozen, reserved, and spendable balances for any imported
+        account.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>Staking activity</span>}
+    description={
+      <span>
+        Get updates on staking rewards, validator exposure, commission changes,
+        and more—whether you&apos;re staking directly or via a pool.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>OpenGov activity</span>}
+    description={
+      <span>
+        Follow key metrics from referenda, including vote counts and and
+        referenda listings.
+      </span>
+    }
+  />
+</ul>
+
+Subscriptions are available for both fully controlled and read-only accounts, allowing you to monitor on-chain activity even if you don't control the private key.
+
+## Notification delivery
+
+Whenever a subscription is triggered, an **event item** is always created and displayed in the main window. These items often include contextual links for deeper inspection—such as to **Subscan**, the **Staking Dashboard**, or **OpenGov portals**, depending on the type of event.
+
+In addition to in-app event items, Polkadot Live can also display **native OS notifications** in your desktop environment. These alerts are optional and fully configurable:
+
+<ul className="flex_Col1">
+  <DetailItem
+    title={<span>Globally</span>}
+    description={
+      <span>
+        Toggle native OS notifications on or off for the entire app. They are
+        enabled by default.
+      </span>
+    }
+  />
+  <DetailItem
+    title={<span>Per subscription</span>}
+    description={
+      <span>
+        Each subscription has its own setting to control whether a native
+        notification is shown when triggered.
+      </span>
+    }
+  />
+</ul>
+
+This gives you fine-grained control over how you stay informed—whether through quiet in-app updates, desktop alerts, or both.
+
+## Looking ahead
+
+The number and variety of available subscriptions is expected to grow as Polkadot Live continues to evolve. This will offer even more fine-grained ways to stay informed about activity across your accounts and networks.

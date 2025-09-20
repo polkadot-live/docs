@@ -1,0 +1,199 @@
+import { SettingItem } from '../../components';
+
+# Subscriptions
+
+## Accounts
+
+### Balances
+
+<ul className="flex_Col2">
+  <SettingItem
+    title={<span>Free</span>}
+    description={
+      <span>Get notified when an account&apos;s free balance changes.</span>
+    }
+  />
+  <SettingItem
+    title={<span>Frozen</span>}
+    description={
+      <span>Get notified when an account&apos;s frozen balance changes.</span>
+    }
+  />
+  <SettingItem
+    title={<span>Reserved</span>}
+    description={
+      <span>Get notified when an account&apos;s reserved balance changes.</span>
+    }
+  />
+  <SettingItem
+    title={<span>Spendable</span>}
+    description={
+      <span>
+        Get notified when an account&apos;s spendable balance changes. An
+        account&apos;s spendable balance is the free balance that can be spent.
+      </span>
+    }
+  />
+</ul>
+
+### Nomination Pools
+
+<ul className="flex_Col2">
+  <SettingItem
+    title={<span>Commission Changed</span>}
+    description={
+      <span>
+        Get notified when your nomination pool changes its commission rate.
+        Higher commission means a larger share of rewards is taken by the pool,
+        reducing your payout.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Pool Name Changed</span>}
+    description={
+      <span>
+        Get notified when your nomination pool&apos;s name changes at the start
+        of a new era.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Pool State Changed</span>}
+    description={
+      <span>
+        Get notified when your nomination pool&apos;s state changes at the start
+        of a new era. The state can be <b>Open</b>, <b>Blocked</b>, or{' '}
+        <b>Destroying</b>, each affecting who can join or leave the pool.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Roles Changed</span>}
+    description={
+      <span>
+        Get notified when your nomination pool&apos;s roles are updated at the
+        start of a new era.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Unclaimed Rewards</span>}
+    description={
+      <span>
+        Get notified when you have unclaimed nomination pool rewards at the
+        start of a new era.
+      </span>
+    }
+  />
+</ul>
+
+### Nominating
+
+<ul className="flex_Col2">
+  <SettingItem
+    title={<span>Commission Changed</span>}
+    description={
+      <span>
+        Get notified when a commission change occurs in your nominated
+        validators.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Era Rewards</span>}
+    description={
+      <span>
+        Get notified of your nominating rewards from the previous era. Polkadot
+        Live calculates rewards directly from blockchain data in a decentralized
+        way.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Exposure Changed</span>}
+    description={
+      <span>
+        Get notified when your nominating exposure changes at the start of a new
+        era. Your address is “exposed” when at least one nominated validator is
+        actively participating in consensus and eligible for rewards.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Nominations Changed</span>}
+    description={
+      <span>
+        Get notified when your nomination pool&apos;s roles are updated at the
+        start of a new era.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Unclaimed Rewards</span>}
+    description={
+      <span>Get notified when your nominated validator set changes.</span>
+    }
+  />
+</ul>
+
+## OpenGov
+
+<ul className="flex_Col2">
+  <SettingItem
+    title={<span>Decision Period</span>}
+    description={
+      <span>
+        Receive the remaining time of an ongoing referendum&apos;s decision
+        period. Remaining time is formatted in a readable Days, Hours and
+        Minutes format.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Thresholds</span>}
+    description={
+      <span>
+        Receive the latest <strong>Minimum Approval Threshold</strong> and{' '}
+        <strong>Minimum Support Threshold</strong> for an ongoing referendum.
+        The referendum&apos;s approval and support thresholds must be over the
+        minimum values for it to pass.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Votes Tally</span>}
+    description={
+      <span>
+        Receive the latest votes tally for an ongoing referendum. The proportion
+        of total aye and nay votes are displayed as percentages for easily
+        distingushing current voter sentiment.
+      </span>
+    }
+  />
+</ul>
+
+## Debugging
+
+:::note
+Use these subscriptions as debugging tools and for observing live data being received from the respective blockchain network.
+:::
+
+<ul className="flex_Col2">
+  <SettingItem
+    title={<span>Current Slot</span>}
+    description={
+      <span>
+        Receive an event item when the chain&apos;s current slot changes.
+      </span>
+    }
+  />
+  <SettingItem
+    title={<span>Timestamps</span>}
+    description={
+      <span>
+        Receive an event item when the chain&apos;s current timestamp changes.
+      </span>
+    }
+  />
+</ul>

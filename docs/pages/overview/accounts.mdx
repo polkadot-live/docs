@@ -1,0 +1,25 @@
+# Accounts
+
+## Account import options
+
+Polkadot Live supports several methods for importing accounts, giving you flexibility based on your preferred tools and level of control. It's an ideal tool for managing multiple accounts across **separate hardware devices**, with built-in support for **Ledger hardware wallets**, the **Polkadot Vault** app, and wallets using the **WalletConnect** protocol. You can also import an account by simply **pasting an address**. The first three options provide full control over the account, including the ability to **sign extrinsics** (transactions). Pasting an address, however, imports it as **read-only**.
+
+## Read-Only accounts
+
+Read-only accounts are useful for **monitoring**. You can import **any valid address** from supported Substrate-based networks, even if you don't control the private key. While these accounts can't sign extrinsics or perform actions like transfers or staking, you can still **enable subscriptions** to receive **real-time event items** and **native OS notifications**, just like with full-access accounts.
+
+## Importing via Ledger, WalletConnect, or Vault
+
+When importing an account via **Ledger**, **WalletConnect**, or **Polkadot Vault**, Polkadot Live provides a **dedicated interface** for each method. These flows connect to your hardware device or external wallet app to retrieve the account's **public key** and register it within the application.
+
+## Signing transactions
+
+Signing happens later, when you submit an extrinsic—such as a transfer or staking action. Polkadot Live will initiate a **separate signing flow**, prompting your connected wallet or device to securely authorize the transaction. At no point does Polkadot Live access or store your private key; it simply facilitates the request.
+
+## Generic account view
+
+Once imported—regardless of method—all accounts appear as **Generic Accounts**. Polkadot Live uses the account's **public key** to derive network-specific addresses for all supported Substrate chains. This allows a single account to function seamlessly across multiple networks.
+
+## After importing
+
+After importing, you can add the account to the main window, configure subscriptions, and begin receiving both on-screen event items and native OS notifications for supported activity.

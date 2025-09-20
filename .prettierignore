@@ -1,0 +1,11 @@
+**/build
+**/node_modules
+**/package.json
+**/yarn.lock
+**/package-lock.json
+**/tsconfig.json
+dist
+out
+.yarn
+.licenserc.json
+.env.yarn
