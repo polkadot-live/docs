@@ -4,7 +4,7 @@ import { useTheme } from '../../hooks';
 
 export const Download = (): React.JSX.Element => {
   const theme = useTheme();
-  const TAG = '0.12.0-beta';
+  const TAG = '0.13.0-beta';
   const RELEASE_URI =
     'https://github.com/polkadot-live/polkadot-live-app/releases';
 
