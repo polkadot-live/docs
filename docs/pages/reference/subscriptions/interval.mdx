@@ -1,0 +1,19 @@
+# Interval Subscriptions
+
+Interval subscriptions provide periodic updates for on-chain data, delivering notifications at configurable intervals rather than in real time. These subscriptions are ideal for tracking slower-moving metrics where immediate updates are not required, such as governance referenda or other time-sensitive, but non-instantaneous events.
+
+This reference lists all currently supported interval subscriptions, organized by category.
+
+## OpenGov
+
+#### Decision Period
+
+Receive the remaining time of an ongoing referendum's decision period. Remaining time is formatted in a readable Days, Hours and Minutes format.
+
+#### Thresholds
+
+Receive the latest **Minimum Approval Threshold** and **Minimum Support Threshold** for an ongoing referendum. The referendum's approval and support thresholds must be over the minimum values for it to pass.
+
+#### Votes Tally
+
+Receive the latest votes tally for an ongoing referendum. The proportion of total aye and nay votes are displayed as percentages for easily distinguishing current voter sentiment.

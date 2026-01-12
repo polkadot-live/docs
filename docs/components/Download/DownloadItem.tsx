@@ -5,7 +5,7 @@ export const DownloadItem = ({
   imageSrc,
   downloadLink,
 }: DownloadItemProps): React.JSX.Element => (
-  <div>
+  <div className="DownloadItem">
     <a href={downloadLink} download>
       <img src={imageSrc} />
     </a>

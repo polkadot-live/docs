@@ -1,5 +1,3 @@
-import { DetailItem } from '../../components';
-
 # Transactions
 
 Polkadot Live provides a streamlined and elegant way to submit extrinsics (transactions) to supported Substrate-based networks. This functionality is designed to be fast, non-intrusive, and integrated smoothly. Currently, submitting extrinsics is fully supported for accounts imported via Ledger hardware wallets, wallets supporting the WalletConnect protocol, and the Polkadot Vault application.
@@ -10,65 +8,30 @@ The process of submitting a transaction is handled entirely within the Polkadot 
 
 Each extrinsic can be reviewed before submission. The **Extrinsics** window provides a summary dialog for each transaction with details such as:
 
-<ul className="flex_Col1">
-  <DetailItem
-    title={<span>Pallet and method name</span>}
-    description={
-      <span>
-        For example: <code>balances.transferKeepAlive</code>, indicating the
-        pallet and function being called.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>Estimated transaction fee</span>}
-    description={
-      <span>
-        Displayed in the network&apos;s native token; this is the cost to
-        process the transaction.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>Signing method</span>}
-    description={
-      <span>
-        The tool used to sign the transaction—e.g., Ledger, WalletConnect, or
-        Polkadot Vault.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>Transaction-specific information</span>}
-    description={
-      <span>
-        Details like the sender&apos;s address and any relevant parameters
-        specific to the extrinsic.
-      </span>
-    }
-  />
-</ul>
+- **Pallet and method name**<br />
+  For example: <code className="vocs_Code">balances.transferKeepAlive</code>, indicating the pallet and function being called.
+
+- **Estimated transaction fee**<br />
+  Displayed in the network&apos;s native token; this is the cost to process the transaction.
+
+- **Signing method**<br />
+  The tool used to sign the transaction—e.g., Ledger, WalletConnect, or Polkadot Vault.
+
+- **Transaction-specific information**<br />
+  Details like the sender&apos;s address and any relevant parameters specific to the extrinsic.
 
 ## Signing transactions
 
 Each extrinsic in the list includes a **Sign** button. When clicked, Polkadot Live opens a signing overlay tailored to the signing account and its import method:
 
-<ul className="flex_Col1">
-  <DetailItem
-    title={<span>Polkadot Vault</span>}
-    description={<span>a QR-based signing flow is shown.</span>}
-  />
-  <DetailItem
-    title={<span>Ledger</span>}
-    description={<span>A USB-based signing prompt is displayed.</span>}
-  />
-  <DetailItem
-    title={<span>WalletConnect</span>}
-    description={
-      <span>A session-based flow is triggered with your connected wallet.</span>
-    }
-  />
-</ul>
+- **Polkadot Vault**<br />
+  A QR-based signing flow is shown.
+
+- **Ledger**<br />
+  USB-based signing prompt is displayed.
+
+- **WalletConnect**<br />
+  A session-based flow is triggered with your connected wallet.
 
 Throughout the signing process, your private keys remain safely on your device or hardware wallet. Polkadot Live only facilitates the signing and submission.
 
@@ -76,29 +39,14 @@ Throughout the signing process, your private keys remain safely on your device o
 
 The Extrinsics window offers several tools to manage your transactions efficiently:
 
-<ul className="flex_Col1">
-  <DetailItem
-    title={<span>Status filters</span>}
-    description={
-      <span>
-        Filter transactions by status such as <b>Pending</b>, <b>In-Block</b>,{' '}
-        <b>Finalized</b>, <b>Error</b>, or <b>Submitted</b>.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>Account filter</span>}
-    description={
-      <span>
-        Lets you view only the transactions associated with a specific account.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>Delete option</span>}
-    description={<span>You may also delete a transaction to remove it.</span>}
-  />
-</ul>
+- **Status filters**<br />
+  Filter transactions by status such as **Pending**, **In-Block**, **Finalized**, **Error**, or **Submitted**.
+
+- **Account filter**<br />
+  Lets you view only the transactions associated with a specific account.
+
+- **Delete option**<br />
+  You may also delete a transaction to remove it.
 
 After signing and submitting a transaction, its status will update in real time as it progresses on the blockchain. Once finalized, you can use the **Block Explorer** button to view granular information about the transaction in an external explorer.
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { LightboxGallery } from './LightboxGallery';
 import { RowsPhotoAlbum } from 'react-photo-album';
 import { getImageSrcArray, getThumbnailSize } from './utils';
@@ -8,19 +8,18 @@ import type { ScreenshotGalleryProps } from './types';
 
 export const ScreenshotGallery = ({
   kind,
-  theme,
   count,
-  overrideTheme,
+  showToggle,
 }: ScreenshotGalleryProps) => {
   const selTheme = useTheme();
-  const curTheme = overrideTheme ? selTheme : theme;
 
+  const [showTheme, setShowTheme] = React.useState(selTheme);
   const [index, setIndex] = React.useState(-1);
   const { width, height } = getThumbnailSize(kind);
 
-  const c = count || (kind === 'main' ? 10 : 19);
-  const thumbnails = getImageSrcArray(curTheme, `thumbnails/${kind}`, c);
-  const slides = getImageSrcArray(curTheme, `screenshots/${kind}`, c).map(
+  const c = count || (kind === 'main' ? 20 : 20);
+  const thumbnails = getImageSrcArray(showTheme, `thumbnails/${kind}`, c);
+  const slides = getImageSrcArray(showTheme, `screenshots/${kind}`, c).map(
     (s, i) => {
       const descriptions =
         kind === 'main' ? mainDescriptions : viewDescriptions;
@@ -28,8 +27,23 @@ export const ScreenshotGallery = ({
     }
   );
 
+  useEffect(() => {
+    setShowTheme(selTheme);
+  }, [selTheme]);
+
   return (
     <>
+      {showToggle && (
+        <button
+          className="vocs_Button_button"
+          onClick={() =>
+            setShowTheme((pv) => (pv === 'dark' ? 'light' : 'dark'))
+          }
+        >
+          {`Show ${showTheme === 'dark' ? 'Light' : 'Dark'} Theme`}
+        </button>
+      )}
+
       <RowsPhotoAlbum
         onClick={({ index: current }) => setIndex(current)}
         photos={thumbnails.map(({ src }) => ({ src, width, height }))}
