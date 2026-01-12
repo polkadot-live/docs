@@ -1,44 +1,17 @@
-import { SettingItem } from '../../components';
-
 # Extrinsics
 
 ## Balances
 
-<ul className="flex_Col2">
-  <SettingItem
-    title={<span>Transfer</span>}
-    description={
-      <span>
-        Sends an amount of native tokens from one account to another on the same
-        network. Uses <code>balances.transferKeepAlive</code> under the hood to
-        ensure the sender&apos;s account remains above the existential deposit.
-      </span>
-    }
-  />
-</ul>
+#### Transfer
+
+Sends an amount of native tokens from one account to another on the same network. Uses <code className="vocs_Code">balances.transferKeepAlive</code> under the hood to ensure the sender's account remains above the existential deposit.
 
 ## Nomination Pools
 
-<ul className="flex_Col2">
-  <SettingItem
-    title={<span>Claim Rewards</span>}
-    description={
-      <span>
-        Claims all pending staking rewards from a nomination pool. This calls{' '}
-        <code>nominationPools.claimPayout</code> to transfer any unclaimed
-        rewards directly to the nominator&apos;s account.
-      </span>
-    }
-  />
-  <SettingItem
-    title={<span>Compound Rewards</span>}
-    description={
-      <span>
-        Bonds any unclaimed nomination pool rewards back into the pool,
-        increasing the nominator&apos;s stake. This calls{' '}
-        <code>nominationPools.bondExtra</code>, which automatically claims and
-        bonds pending rewards in a single step.
-      </span>
-    }
-  />
-</ul>
+#### Claim Rewards
+
+Claims all pending staking rewards from a nomination pool. This calls <code className="vocs_Code">nominationPools.claimPayout</code> to transfer any unclaimed rewards directly to the nominator's account.
+
+#### Compound Rewards
+
+Bonds any unclaimed nomination pool rewards back into the pool, increasing the nominator's stake. This calls <code className="vocs_Code">nominationPools.bondExtra</code>, which automatically claims and bonds pending rewards in a single step.

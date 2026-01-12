@@ -19,7 +19,6 @@ export default defineConfig({
     },
     {
       text: 'Concepts',
-      collapsed: undefined,
       items: [
         { text: 'Accounts', link: '/overview/accounts' },
         { text: 'Notifications', link: '/overview/notifications' },
@@ -28,11 +27,18 @@ export default defineConfig({
     },
     {
       text: 'Reference',
-      collapsed: undefined,
       items: [
         { text: 'Extrinsics', link: '/reference/extrinsics' },
         { text: 'Settings', link: '/reference/settings' },
-        { text: 'Subscriptions', link: '/reference/subscriptions' },
+        {
+          text: 'Subscriptions',
+          items: [
+            { text: 'Overview', link: '/reference/subscriptions' },
+            { text: 'Automatic', link: '/reference/subscriptions/automatic' },
+            { text: 'Chain Events', link: '/reference/subscriptions/chain' },
+            { text: 'Interval', link: '/reference/subscriptions/interval' },
+          ],
+        },
       ],
     },
     {
@@ -41,7 +47,6 @@ export default defineConfig({
     },
     {
       text: 'Links',
-      collapsed: undefined,
       items: [
         {
           text: 'View on GitHub',

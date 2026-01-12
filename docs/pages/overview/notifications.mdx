@@ -1,112 +1,56 @@
-import { DetailItem } from '../../components';
-
 # Notifications
 
-Polkadot Live offers a flexible notification system powered by subscriptions, allowing you to monitor on-chain activity across accounts, governance, and staking. Notifications are delivered both as **native OS notifications** and as **event items** within the app's main window. These event items often include helpful links to external tools like **Subscan** or the **Staking Dashboard**, depending on the notification type.
+Polkadot Live provides a flexible, subscription-based notification system for monitoring on-chain activity across accounts, governance, staking, and the wider network. Notifications are delivered as structured event items within the app and, optionally, as native OS notifications. Events often include contextual links to external tools such as **Subscan**, **OpenGov portals**, or the **Staking Dashboard**, allowing for deeper inspection when needed.
+
+In addition to traditional value-based subscriptions, Polkadot Live now supports real-time chain event subscriptions. These enable direct tracking of on-chain events as they occur, offering more immediate and granular visibility into blockchain activity.
 
 ## Subscription types
 
-There are currently two main types of subscriptions in Polkadot Live, with support for on-demand previews as well:
+Polkadot Live supports multiple subscription models to accommodate different types of on-chain data and update frequencies:
 
-<ul className="flex_Col1">
-  <DetailItem
-    title={<span>Automatic subscriptions</span>}
-    description={
-      <span>
-        These trigger notifications immediately when a tracked on-chain value
-        changes. For example, if a balance subscription is active for an
-        account, you&apos;ll be notified as soon as that account sends or
-        receives funds.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>Interval subscriptions</span>}
-    description={
-      <span>
-        These are ideal for tracking slower-moving metrics, such as OpenGov
-        referenda. You can configure a custom interval (e.g. every 60 minutes)
-        to receive updates, such as the latest Aye/Nay vote percentages on a
-        referendum.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>One-shot previews</span>}
-    description={
-      <span>
-        Some subscriptions can be previewed by clicking a &quot;one-shot&quot;
-        button. This gives you a real-time look at the event data without
-        enabling continuous tracking.
-      </span>
-    }
-  />
-</ul>
+- **Chain event subscriptions**<br />
+  These subscriptions trigger when specific events are emitted on-chain. They can be scoped to the entire chain, a specific account, or an individual OpenGov referendum.
+
+- **Automatic subscriptions**<br />
+  These monitor on-chain values and trigger notifications as soon as a tracked value changes. For example, a balance subscription will notify you when an account sends or receives funds.
+
+- **Interval subscriptions**<br />
+  These are suited for slower-changing data, such as OpenGov referenda metrics. Updates are delivered at a configurable interval (for example, every 60 minutes) and may include information like current Aye/Nay vote percentages or referendum status changes.
+
+- **One-shot previews**<br />
+  Some subscriptions support one-shot previews, allowing you to fetch and inspect the latest data immediately without enabling ongoing tracking.
 
 ## Available subscriptions
 
-Polkadot Live supports subscriptions for a variety of data types across Substrate-based chains, including:
+Subscribe directly to on-chain events as they occur. Subscriptions can be scoped to the entire chain, a specific account, or an individual OpenGov referendum. Events are dispatched in real time when the subscribed event is detected.
 
-<ul className="flex_Col1">
-  <DetailItem
-    title={<span>Account metrics</span>}
-    description={
-      <span>
-        Track free, frozen, reserved, and spendable balances for any imported
-        account.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>Staking activity</span>}
-    description={
-      <span>
-        Get updates on staking rewards, validator exposure, commission changes,
-        and more—whether you&apos;re staking directly or via a pool.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>OpenGov activity</span>}
-    description={
-      <span>
-        Follow key metrics from referenda, including vote counts and and
-        referenda listings.
-      </span>
-    }
-  />
-</ul>
+- **Chain-related activity**<br />
+  Subscribe to on-chain events in real time. Network-scoped subscriptions are unfiltered and capture every occurrence of the selected event.
 
-Subscriptions are available for both fully controlled and read-only accounts, allowing you to monitor on-chain activity even if you don't control the private key.
+- **Account-related activity**<br />
+  Track balance changes, transfers, staking actions, and other events involving a specific account.
+
+- **Staking activity**<br />
+  Monitor staking rewards, validator exposure, commission changes, pool participation, and related staking events.
+
+- **OpenGov and governance activity**<br />
+  Follow referenda throughout their lifecycle, including key milestones such as decision deposits, voting phases, confirmations, and outcome-related events.
+
+Subscriptions are available for both fully controlled and read-only accounts, enabling comprehensive monitoring even when you do not control the private keys.
 
 ## Notification delivery
 
-Whenever a subscription is triggered, an **event item** is always created and displayed in the main window. These items often include contextual links for deeper inspection—such as to **Subscan**, the **Staking Dashboard**, or **OpenGov portals**, depending on the type of event.
+Whenever a subscription is triggered, an **event item** is always created and displayed in the main window. These items present structured, readable data and often include links to relevant external tools for further analysis.
 
 In addition to in-app event items, Polkadot Live can also display **native OS notifications** in your desktop environment. These alerts are optional and fully configurable:
 
-<ul className="flex_Col1">
-  <DetailItem
-    title={<span>Globally</span>}
-    description={
-      <span>
-        Toggle native OS notifications on or off for the entire app. They are
-        enabled by default.
-      </span>
-    }
-  />
-  <DetailItem
-    title={<span>Per subscription</span>}
-    description={
-      <span>
-        Each subscription has its own setting to control whether a native
-        notification is shown when triggered.
-      </span>
-    }
-  />
-</ul>
+- **Globally**<br />
+  Native OS notifications can be enabled or disabled for the entire application.
 
-This gives you fine-grained control over how you stay informed—whether through quiet in-app updates, desktop alerts, or both.
+- **Per subscription**<br />
+  Each subscription has its own setting to control whether a native notification is shown when triggered.
+
+This approach gives you fine-grained control over how you stay informed, combining real-time event tracking with flexible delivery options.
 
 ## Looking ahead
 

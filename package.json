@@ -13,7 +13,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-photo-album": "^3.1.0",
-    "vocs": "latest",
+    "vocs": "^1.4.1",
     "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {

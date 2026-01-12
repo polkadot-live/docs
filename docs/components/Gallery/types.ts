@@ -9,7 +9,6 @@ export interface LightboxGalleryProps {
 
 export interface ScreenshotGalleryProps {
   kind: 'main' | 'views';
-  theme: 'dark' | 'light';
   count?: number;
-  overrideTheme?: boolean;
+  showToggle?: boolean;
 }
