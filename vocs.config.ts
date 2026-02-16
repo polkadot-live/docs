@@ -33,7 +33,7 @@ export default defineConfig({
         {
           text: 'Subscriptions',
           items: [
-            { text: 'Overview', link: '/reference/subscriptions' },
+            { text: 'Overview', link: '/reference/subscriptions/overview' },
             { text: 'Automatic', link: '/reference/subscriptions/automatic' },
             { text: 'Chain Events', link: '/reference/subscriptions/chain' },
             { text: 'Interval', link: '/reference/subscriptions/interval' },
@@ -69,6 +69,10 @@ export default defineConfig({
     {
       text: 'GitHub',
       link: 'https://github.com/polkadot-live/polkadot-live-app',
+    },
+    {
+      text: 'Landing',
+      link: 'https://polkadot-live.app',
     },
     {
       text: 'Latest Release',

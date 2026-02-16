@@ -22,12 +22,6 @@ export const Download = (): React.JSX.Element => {
         imageSrc={`/images/${theme}/DownloadLinux.webp`}
         downloadLink={`${RELEASE_URI}/download/v${TAG}/Polkadot-Live-${TAG}.AppImage`}
       />
-      <div className="ComingSoon">
-        <img
-          alt="Coming Soon"
-          src={`/images/${theme}/DownloadExtension.webp`}
-        />
-      </div>
     </div>
   );
 };
