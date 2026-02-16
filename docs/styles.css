@@ -1,0 +1,131 @@
+:root {
+  --yarl__container_background_color: rgba(0, 0, 0, 0.94);
+  --yarl__slide_description_color: var(--vocs-color_text3);
+  --yarl__slide_captions_container_padding: 16px;
+  --yarl__slide_captions_container_background: rgba(0, 0, 0, 0.85);
+  --vocs-content_width: calc(
+    80ch +
+    (var(--vocs-content_horizontalPadding) * 2)
+  );
+}
+.vocs_HomePage_buttons {
+  gap: var(--vocs-space_12) !important;
+}
+.textAccent {
+  font-weight: bold;
+  padding-right: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/**
+ * Download
+ */
+.Download {
+  border-radius: 0.6rem;
+  padding: 1.25rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+.DownloadItem {
+  opacity: 0.8;
+  transition: opacity 0.1s ease-out;
+}
+.DownloadItem:hover {
+  opacity: 100;
+}
+.ComingSoon {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+@media (max-width: 900px) {
+  .Download {
+    flex-direction: column;
+    gap: 0.25rem !important;
+  }
+  .Download img {
+    max-width: 260px;
+  }
+}
+
+/**
+ * Footer
+ */
+.Footer {
+  color: var(--vocs-color_text2);
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: start;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+.Footer .Links {
+  display: flex;
+  gap: 0.75rem;
+}
+.Footer .Links a {
+  color: var(--vocs-color_text4);
+}
+.Footer .Links a:hover {
+  color: var(--vocs-color_text1);
+}
+@media (max-width: 720px) {
+  .Footer {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.1rem !important;
+  }
+}
+
+/**
+ * Homepage
+ */
+.TitleRow {
+  padding-top: var(--vocs-space_56);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.TagLine {
+  text-align: center;
+}
+.Logo {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.Logo img:first-of-type {
+  width: 62px;
+}
+.HomeGalleryContainer {
+  background-color: var(--vocs-color_noteBackground);
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+@media (max-width: 720px) {
+  .HomeGalleryContainer {
+    padding: 0.5rem;
+  }
+}
+
+/**
+ * Utils
+ */
+.flex_Col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.flex_AlignCenter {
+  align-items: center;
+}
+.flex_JustifyCenter {
+  display: flex;
+  justify-content: center;
+}

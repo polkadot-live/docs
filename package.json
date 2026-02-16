@@ -1,0 +1,27 @@
+{
+  "name": "polkadot-live-docs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vocs dev",
+    "build": "vocs build",
+    "preview": "vocs preview",
+    "format:file": "biome format --write $1",
+    "lint:check": "biome format"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "react-photo-album": "^3.1.0",
+    "vocs": "^1.4.1",
+    "yet-another-react-lightbox": "^3.25.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.15",
+    "@types/react": "latest",
+    "globals": "^16.4.0",
+    "jiti": "^2.5.1",
+    "typescript": "latest"
+  }
+}

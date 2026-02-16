@@ -1,0 +1,233 @@
+# Chain Event Subscriptions
+
+Polkadot Live allows users to subscribe to real-time events occurring on-chain across multiple networks and accounts. These chain event subscriptions provide granular, immediate notifications whenever a specific event happens, whether globally across the entire network, scoped to a particular account, or linked to an individual OpenGov referendum.
+
+This reference lists all currently supported chain events, organized by category.
+
+## Balances
+
+#### Deposit
+
+Some amount was deposited (e.g. for transaction fees).
+
+#### Frozen
+
+Some balance was frozen.
+
+#### Locked
+
+Some balance was locked.
+
+#### Reserved
+
+Some balance was reserved (moved from free to reserved).
+
+#### Restored
+
+Some amount was restored into an account.
+
+#### Slashed
+
+Some amount was removed from the account (e.g. for misbehavior).
+
+#### Suspended
+
+Some amount was suspended from an account (it can be restored later).
+
+#### Thawed
+
+Some balance was thawed.
+
+#### Transfer
+
+A transfer on the network succeeded.
+
+#### Unlocked
+
+Some balance was unlocked.
+
+#### Unreserved
+
+Some balance was unreserved (moved from reserved to free).
+
+#### Withdraw
+
+Some amount was withdrawn from the account (e.g. for transaction fees).
+
+## Conviction Voting
+
+#### Delegated
+
+An account has delegated their vote to another account.
+
+#### Undelegated
+
+An account has canceled a previous delegation operation.
+
+#### Vote Removed
+
+A vote has been removed.
+
+#### Vote Unlocked
+
+The lockup period of a conviction vote expired, and the funds have been unlocked.
+
+#### Voted
+
+An account has voted.
+
+## Nomination Pools
+
+#### Bonded
+
+A member has became bonded in a pool.
+
+#### Created
+
+A pool has been created.
+
+#### Destroyed
+
+A pool has been destroyed.
+
+#### Member Removed
+
+A member has been removed from a pool.
+
+The removal can be voluntary (withdrawn all unbonded funds) or involuntary (kicked). Any funds that are still delegated are released.
+
+#### Metadata Updated
+
+A pool's metadata was updated.
+
+#### Paid Out
+
+A payout has been made to a member.
+
+#### Pool Commission Change Rate Updated
+
+A pool's commission change rate has been changed.
+
+#### Pool Commission Claim Permission Updated
+
+Pool commission claim permission has been updated.
+
+#### Pool Commission Claimed
+
+Pool commission has been claimed.
+
+#### Pool Commission Updated
+
+A pool's commission setting has been changed.
+
+#### Pool Slashed
+
+The active balance of a pool has been slashed.
+
+#### State Changed
+
+The state of a pool has changed.
+
+#### Unbonded
+
+A member has unbonded from their pool.
+
+#### Unbonding Pool Slashed
+
+The unbonded pool has been slashed to a new balance.
+
+#### Withdrawn
+
+A member has withdrawn from their pool.
+
+## Referenda
+
+#### Decision Deposit Placed
+
+The decision deposit has been placed for a referendum.
+
+#### Decision Deposit Refunded
+
+The decision deposit has been refunded for a referendum.
+
+#### Decision Phase Started
+
+A referendum has moved into the deciding phase.
+
+#### Deposit Slashed
+
+A referendum's deposit has been slashed.
+
+#### Referendum Approved
+
+A referendum has been approved and its proposal has been scheduled.
+
+#### Referendum Canceled
+
+A referendum has been canceled.
+
+#### Referendum Confirmation Aborted
+
+A referendum's confirmation phase has been aborted.
+
+#### Referendum Confirmation Started
+
+A referendum has moved into the confirmation phase.
+
+#### Referendum Confirmed
+
+A referendum has ended its confirmation phase and is ready for approval.
+
+#### Referendum Killed
+
+A referendum has been killed.
+
+#### Referendum Rejected
+
+A proposal has been rejected by referendum.
+
+#### Referendum Submitted
+
+A referendum has been submitted.
+
+#### Referendum Timed Out
+
+A referendum has been timed out without being decided.
+
+#### Submission Deposit Refunded
+
+A referendum's submission deposit has been refunded.
+
+## Staking
+
+#### Account Chilled
+
+An account has stopped participating as either a validator or nominator.
+
+#### Bonded
+
+An account has bonded an amount.
+
+#### Era Paid
+
+The era payout has been set.
+
+#### Nominator Kicked
+
+A nominator has been kicked from a validator.
+
+#### Nominator Rewarded
+
+The nominator has been rewarded by this amount.
+
+#### Staker Slashed
+
+A staker (validator or nominator) has been slashed by the given amount.
+
+#### Unbonded
+
+An account has unbonded an amount.
+
+#### Validator Preferences Set
+
+A validator has set their preferences.

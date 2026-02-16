@@ -1,0 +1,79 @@
+# Automatic Subscriptions
+
+Automatic subscriptions provide real-time notifications whenever tracked on-chain data changes. These subscriptions are ideal for monitoring events that require immediate awareness, such as account balance updates, staking activity, nomination pool changes, or live chain data.
+
+This reference lists all supported automatic subscriptions, organized by category.
+
+## Accounts
+
+### Balances
+
+#### Free
+
+Get notified when an account's free balance changes.
+
+#### Frozen
+
+Get notified when an account's frozen balance changes.
+
+#### Reserved
+
+Get notified when an account's reserved balance changes.
+
+#### Spendable
+
+Get notified when an account's spendable balance changes. An account's spendable balance is the free balance that can be spent.
+
+### Nomination Pools
+
+#### Commission Changed
+
+Get notified when a nomination pool changes its commission rate. Higher commission means a larger share of rewards is taken by the pool, reducing your payout.
+
+#### Pool Name Changed
+
+Get notified when a nomination pool's name changes at the start of a new era.
+
+#### Pool State Changed
+
+Get notified when a nomination pool's state changes at the start of a new era. The state can be **Open**, **Blocked**, or **Destroying**, each affecting who can join or leave the pool.
+
+#### Roles Changed
+
+Get notified when nomination pool roles are updated at the start of a new era.
+
+#### Unclaimed Rewards
+
+Get notified of unclaimed nomination pool rewards at the start of a new era.
+
+### Nominating
+
+#### Commission Changed
+
+Get notified when a commission change occurs in nominated validators.
+
+#### Era Rewards
+
+Get notified of unclaimed nominating rewards from the previous era. Polkadot Live calculates rewards directly from blockchain data in a decentralized way.
+
+#### Exposure Changed
+
+Get notified when nominating exposure changes at the start of a new era. Your address is “exposed” when at least one nominated validator is actively participating in consensus and eligible for rewards.
+
+#### Nominations Changed
+
+Get notified when nomination pool roles are updated at the start of a new era.
+
+## Debugging
+
+:::note
+Use these subscriptions as debugging tools and for observing live data being received from the respective blockchain network.
+:::
+
+#### Current Slot
+
+Receive an event item when the chain's current slot changes.
+
+#### Timestamps
+
+Receive an event item when the chain's current timestamp changes.

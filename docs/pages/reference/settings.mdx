@@ -1,0 +1,102 @@
+# Settings
+
+## General
+
+#### Docked Window
+
+This setting controls whether the main window is fixed or free-floating.
+
+- <span className="textAccent">On</span>
+  The window is docked below the Polkadot Live icon with a fixed size and
+  position. You can't move or resize it.
+- <span className="textAccent">Off</span>
+  The window floats freely and can be moved anywhere on the screen. You can also
+  resize it vertically by dragging the top or bottom edges.
+
+#### Enable Polkassembly Data
+
+This setting controls whether proposal metadata is fetched from the Polkassembly API for display in the OpenGov window.
+
+- <span className="textAccent">On</span>
+  Referenda listings will include proposal titles as seen on portals like
+  Polkassembly and Subsquare. This lets you read metadata directly in Polkadot
+  Live without visiting external sites.
+- <span className="textAccent">Off</span>
+  Metadata is not fetched. Listings will show only on-chain data (e.g. proposal
+  ID and track). You&apos;ll need to click a portal link to view full details on
+  an external site. Rendering may be faster with this option.
+
+#### Hide Dock Icon (macOS)
+
+Controls whether the Polkadot Live icon appears in the macOS dock.
+
+- <span className="textAccent">On</span>
+  The app icon is hidden from the dock.
+- <span className="textAccent">Off</span>
+  The app icon is visible in the dock.
+
+#### Show On All Workspaces (macOS)
+
+Controls whether Polkadot Live windows appear in all macOS workspaces or just one.
+
+- <span className="textAccent">On</span>
+  The main window and open views are visible in every workspace.
+- <span className="textAccent">Off</span>
+  Windows appear only in the workspace where Polkadot Live was opened.
+
+#### Silence OS Notifications
+
+Globally controls whether native OS notifications are shown in Polkadot Live.
+
+- <span className="textAccent">On</span>
+  Native notifications are disabled throughout the application.
+- <span className="textAccent">Off</span>
+  Native notifications are active. Individual subscription settings determine if
+  their notifications are shown.
+
+## Subscriptions
+
+#### Enable Automatic Subscriptions
+
+Controls whether all available subscriptions are automatically enabled when importing an account.
+
+- <span className="textAccent">On</span>
+  All available subscriptions are enabled by default when an account is
+  imported.
+- <span className="textAccent">Off</span>
+  No subscriptions are enabled automatically. You&apos;ll need to manage them
+  manually via the account&apos;s subscription settings.
+
+#### Keep Outdated Events
+
+Controls whether older event items remain visible when a new event is received for the same subscription.
+
+- <span className="textAccent">On</span>
+  Old event items are kept in the UI. This allows you to track historical events
+  for each subscription.
+- <span className="textAccent">Off</span>
+  Old event items are removed when a new event is received for the same
+  subscription and account.
+
+#### Show Debugging Subscriptions
+
+Controls whether the Debugging category is visible in the **Account Subscriptions** tab of the main window.
+
+- <span className="textAccent">On</span>A debugging category appears in the main
+  window's account subscriptions screen. You can select a chain to enable
+  debugging subscriptions, such as retrieving the latest timestamp and current
+  slot. These help verify that your system can fetch real-time data from the
+  network.
+- <span className="textAccent">Off</span>
+  The debugging category is hidden from the main window.
+
+## Backup
+
+#### Export
+
+Clicking the export button opens a native dialog to save your Polkadot Live account data as a text file.
+
+#### Import
+
+Clicking the Import button opens a native dialog to select a previously
+exported Polkadot Live data file.
