@@ -4,7 +4,7 @@ import type React from 'react';
 
 export const Download = (): React.JSX.Element => {
   const theme = useTheme();
-  const TAG = '0.13.0-beta';
+  const TAG = '0.14.0-beta';
   const RELEASE_URI =
     'https://github.com/polkadot-live/polkadot-live-app/releases';
 
