@@ -1,0 +1,76 @@
+# Docker Compose Configuration
+
+services:
+  # Development Service
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: polkadot-live-docs-dev
+    ports:
+      - 5173:5173
+    environment:
+      NODE_ENV: development
+    volumes:
+      - './.git:/usr/src/app/.git:ro'
+      - './docs:/usr/src/app/docs:ro'
+      - './package.json:/usr/src/app/package.json:ro'
+      - './tsconfig.json:/usr/src/app/tsconfig.json:ro'
+      - './vocs.config.ts:/usr/src/app/vocs.config.ts:ro'
+      - 'vite-cache:/usr/src/app/node_modules/.vite'
+    develop:
+      watch:
+        - action: rebuild
+          path: ./package.json
+          target: /usr/src/app/package.json
+        - action: sync
+          path: ./docs
+          target: /usr/src/app/docs
+    restart: no
+    networks:
+      - pl-network
+    profiles:
+      - dev
+
+  # Production Service
+  app-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: polkadot-live-docs-prod
+    ports:
+      - 3000:80
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:80"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 128M
+        reservations:
+          cpus: '0.1'
+          memory: 32M
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp
+    networks:
+      - pl-network
+    profiles:
+      - prod
+
+networks:
+  pl-network:
+    driver: bridge
+
+volumes:
+  vite-cache:

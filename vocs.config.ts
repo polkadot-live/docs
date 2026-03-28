@@ -89,4 +89,16 @@ export default defineConfig({
       },
     },
   },
+  vite: {
+    ...(process.env.RUN_IN_CONTAINER && {
+      server: {
+        host: '0.0.0.0', // Required for docker containers.
+        port: 5173,
+      },
+      preview: {
+        host: '0.0.0.0', // Required for docker containers.
+        port: 4173,
+      },
+    }),
+  },
 });

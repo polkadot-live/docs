@@ -7,6 +7,8 @@
     "dev": "vocs dev",
     "build": "vocs build",
     "preview": "vocs preview",
+    "docker:dev": "docker compose --profile dev up -d",
+    "docker:prod": "docker compose --profile prod up -d",
     "format:file": "biome format --write $1",
     "lint:check": "biome format"
   },
